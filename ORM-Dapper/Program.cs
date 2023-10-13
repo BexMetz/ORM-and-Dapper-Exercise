@@ -1,4 +1,5 @@
 ﻿using ORM_Dapper;
+using System;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -32,6 +33,11 @@ foreach (var prod in prodList)
     Console.WriteLine($"{prod.ProductID} - {prod.Name}");
 }
 
+Console.WriteLine("What is the Product ID to be updated?");
+var prodID = int.Parse(Console.ReadLine());
 
+Console.WriteLine("What is the updated product name?");
+var newName = Console.ReadLine();
 
+repo.UpdateProduct(prodID, newName);
 

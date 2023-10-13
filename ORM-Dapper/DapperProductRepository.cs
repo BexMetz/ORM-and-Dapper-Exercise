@@ -24,6 +24,12 @@ namespace ORM_Dapper
 		{
 			return _connection.Query<Product>("SELECT * FROM products;");
 		}
-	}
+
+        public void UpdateProduct(int productID, string updatedName)
+        {
+			_connection.Execute("UPDATE products SET Name = @updatedName WHERE productID = @productID;",
+                new { productID, updatedName });
+        }
+    }
 }
 
