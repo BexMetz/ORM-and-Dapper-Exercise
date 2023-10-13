@@ -11,4 +11,9 @@
   <ItemGroup>
     <None Include="bin\Debug\net6.0\appsettings.json" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.1.0" />
+    <PackageReference Include="Dapper" Version="2.1.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+  </ItemGroup>
 </Project>
